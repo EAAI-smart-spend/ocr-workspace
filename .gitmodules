@@ -1,3 +1,6 @@
 [submodule "deep-text-recognition-benchmark"]
 	path = deep-text-recognition-benchmark
 	url = https://github.com/EAAI-smart-spend/deep-text-recognition-benchmark
+[submodule "TextRecognitionDataGenerator"]
+	path = TextRecognitionDataGenerator
+	url = https://github.com/EAAI-smart-spend/TextRecognitionDataGenerator
