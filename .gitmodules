@@ -4,3 +4,6 @@
 [submodule "TextRecognitionDataGenerator"]
 	path = TextRecognitionDataGenerator
 	url = https://github.com/EAAI-smart-spend/TextRecognitionDataGenerator
+[submodule "TRDG2DTRB"]
+	path = TRDG2DTRB
+	url = https://github.com/EAAI-smart-spend/TRDG2DTRB
