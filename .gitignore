@@ -1,0 +1,2 @@
+workspace/pre_trained_models/*
+!workspace/pre_trained_models/README.md
