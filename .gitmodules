@@ -7,3 +7,6 @@
 [submodule "TRDG2DTRB"]
 	path = TRDG2DTRB
 	url = https://github.com/EAAI-smart-spend/TRDG2DTRB
+[submodule "dataset"]
+	path = dataset
+	url = https://github.com/EAAI-smart-spend/ocr-dataset

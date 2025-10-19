@@ -1,2 +1,2 @@
-workspace/pre_trained_models/*
-!workspace/pre_trained_models/README.md
+pre_trained_models/*
+!pre_trained_models/README.md
