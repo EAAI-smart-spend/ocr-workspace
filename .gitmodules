@@ -10,3 +10,6 @@
 [submodule "dataset"]
 	path = dataset
 	url = https://github.com/EAAI-smart-spend/ocr-dataset
+[submodule "EasyOCR"]
+	path = EasyOCR
+	url = https://github.com/EAAI-smart-spend/EasyOCR
