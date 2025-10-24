@@ -1,2 +1,11 @@
 pre_trained_models/*
 !pre_trained_models/README.md
+
+user_network_dir/*.pth
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
