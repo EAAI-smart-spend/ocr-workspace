@@ -1,0 +1,54 @@
+--------------------------------------------------------------------------------
+dataset_root: dataset/step3/training
+opt.select_data: ['/']
+opt.batch_ratio: ['1']
+--------------------------------------------------------------------------------
+dataset_root:    dataset/step3/training	 dataset: /
+sub-directory:	/.	 num samples: 48481
+num total samples of /: 48481 x 1.0 (total_data_usage_ratio) = 48481
+num samples of / per batch: 192 x 1.0 (batch_ratio) = 192
+--------------------------------------------------------------------------------
+dataset_root: dataset/step3/training
+opt.select_data: ['/']
+opt.batch_ratio: ['1']
+--------------------------------------------------------------------------------
+dataset_root:    dataset/step3/training	 dataset: /
+sub-directory:	/.	 num samples: 48481
+num total samples of /: 48481 x 1.0 (total_data_usage_ratio) = 48481
+num samples of / per batch: 192 x 1.0 (batch_ratio) = 192
+--------------------------------------------------------------------------------
+Total_batch_size: 192 = 192
+--------------------------------------------------------------------------------
+dataset_root:    dataset/step3/validation	 dataset: /
+sub-directory:	/.	 num samples: 4855
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+dataset_root: dataset/step3/training
+opt.select_data: ['/']
+opt.batch_ratio: ['1']
+--------------------------------------------------------------------------------
+dataset_root:    dataset/step3/training	 dataset: /
+sub-directory:	/.	 num samples: 10000
+num total samples of /: 10000 x 1.0 (total_data_usage_ratio) = 10000
+num samples of / per batch: 192 x 1.0 (batch_ratio) = 192
+--------------------------------------------------------------------------------
+Total_batch_size: 192 = 192
+--------------------------------------------------------------------------------
+dataset_root:    dataset/step3/validation	 dataset: /
+sub-directory:	/.	 num samples: 1000
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+dataset_root: dataset/step3/training
+opt.select_data: ['/']
+opt.batch_ratio: ['1']
+--------------------------------------------------------------------------------
+dataset_root:    dataset/step3/training	 dataset: /
+sub-directory:	/.	 num samples: 10000
+num total samples of /: 10000 x 1.0 (total_data_usage_ratio) = 10000
+num samples of / per batch: 192 x 1.0 (batch_ratio) = 192
+--------------------------------------------------------------------------------
+Total_batch_size: 192 = 192
+--------------------------------------------------------------------------------
+dataset_root:    dataset/step3/validation	 dataset: /
+sub-directory:	/.	 num samples: 1000
+--------------------------------------------------------------------------------
