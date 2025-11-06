@@ -16,3 +16,6 @@ Prediction: 'Attn'
 num_fiducial: 20
 imgH: 32
 imgW: 100
+lang_list:
+  - en
+  - ch_tra
