@@ -9,3 +9,6 @@ __pycache__/
 *$py.class
 *.so
 .Python
+
+.venv*
+.ipynb_checkpoints*
