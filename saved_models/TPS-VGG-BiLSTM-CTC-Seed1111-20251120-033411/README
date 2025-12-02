@@ -1,0 +1,61 @@
+[Run Summary]
+
+This run fine-tuned EasyOCR's chinese.pth on a small real-receipt dataset (~200 cropped line images).
+
+[Key Observations]
+
+- Train loss quickly dropped to ~0 and stayed there.
+- Valid loss started high (~15.28), briefly improved, then increased further to ~17+.
+- Best validation accuracy (full-string correct) was only ~11.11%.
+- Best validation norm_ED was ~0.29 and plateaued early.
+- Qualitative samples show many important fields (item names, totals, serial numbers) are often misread or badly distorted.
+- Some simple numeric lines (e.g. "2", "20.00") are correct, but most complex receipt lines are not.
+
+[Interpretation]
+
+- The model heavily overfit the tiny training set (≈200 lines).
+- Generalization to the validation set is poor and appears worse than the original chinese.pth.
+- This checkpoint is not recommended for any real use; it likely degraded the base model’s general receipt performance instead of improving it.
+
+[Root Causes]
+
+- Dataset is too small:
+  - A few hundred receipt lines are far below what this CRNN+CTC model needs to adapt reliably.
+- Training configuration is too strong for this data size:
+  - 150,000 iterations on ~200 samples = extreme overfitting.
+  - Learning rate 1e-4 is relatively large for such a small fine-tune set.
+- Task difficulty:
+  - Real receipts contain mixed Chinese, digits, punctuation, and varying fonts/layouts that are hard to cover with such a small dataset.
+
+[Recommendations / Next Steps]
+
+1. Do NOT use this run’s best_accuracy.pth for production or further fine-tune.
+   - For future experiments, always restart from pre_trained_models/chinese.pth instead of this checkpoint.
+
+2. Increase real receipt dataset size before the next fine-tune:
+   - Target (line-level cropped images, not full receipts):
+     - Train: at least 2,000–3,000 lines.
+     - Validation: ~500 lines.
+     - Test: ~500 lines.
+   - Each line label should include all visible characters:
+     - Chinese, digits, English letters, and punctuation/symbols as they appear on the receipt.
+
+3. Use a lighter fine-tune configuration on the small real dataset:
+   - Example:
+     - --saved_model pre_trained_models/chinese.pth
+     - --FT
+     - --lr 5e-5
+     - --num_iter 20000
+     - --workers 0
+   - Monitor validation loss/accuracy:
+     - If validation loss rises early or accuracy drops, stop training sooner.
+
+4. Evaluate with real receipts via Step 4:
+   - Compare:
+     - EasyOCR pretrained model (ch_tra).
+     - Custom fine-tuned model (on a larger real receipt dataset).
+   - Use a representative set of real receipts (or receipt line crops) in demo_images/ to judge whether the fine-tuned model actually improves over the baseline.
+
+[Bottom Line]
+
+This run is useful as a pipeline and configuration test, but the resulting checkpoint should NOT be considered an improved receipt model. A larger, more representative receipt line dataset and a milder fine-tuning schedule are required for meaningful gains.
