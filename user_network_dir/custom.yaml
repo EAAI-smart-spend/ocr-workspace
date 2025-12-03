@@ -4,7 +4,7 @@ lang_list: ["ch_tra"]
 network_params:
   input_channel: 1
   output_channel: 512
-  hidden_size: 256
+  hidden_size: 512
   imgH: 32
   imgW: 100
   Transformation: "TPS"
