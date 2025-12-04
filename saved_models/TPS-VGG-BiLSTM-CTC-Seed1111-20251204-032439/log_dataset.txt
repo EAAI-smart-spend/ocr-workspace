@@ -1,0 +1,15 @@
+--------------------------------------------------------------------------------
+dataset_root: dataset/real_receipt/train
+opt.select_data: ['/']
+opt.batch_ratio: ['1']
+--------------------------------------------------------------------------------
+dataset_root:    dataset/real_receipt/train	 dataset: /
+sub-directory:	/.	 num samples: 2126
+num total samples of /: 2126 x 1.0 (total_data_usage_ratio) = 2126
+num samples of / per batch: 192 x 1.0 (batch_ratio) = 192
+--------------------------------------------------------------------------------
+Total_batch_size: 192 = 192
+--------------------------------------------------------------------------------
+dataset_root:    dataset/real_receipt/valid	 dataset: /
+sub-directory:	/.	 num samples: 265
+--------------------------------------------------------------------------------
